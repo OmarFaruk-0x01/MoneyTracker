@@ -1,0 +1,21 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.body span {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body span:nth-child(2) {
+  cursor: pointer;
+  color: #666;
+}
+
+.body span:nth-child(2):hover {
+  color: teal;
+}

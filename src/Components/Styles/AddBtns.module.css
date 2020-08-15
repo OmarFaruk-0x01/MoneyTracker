@@ -1,0 +1,27 @@
+.body {
+  width: 100%;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.body_inc {
+  background-color: teal;
+}
+.body_inc:hover {
+  box-shadow: 0px 1px 3px teal;
+}
+
+.body_exp {
+  background-color: tomato;
+}
+.body_exp:hover {
+  box-shadow: 0px 1px 3px tomato;
+}

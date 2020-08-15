@@ -1,0 +1,60 @@
+.main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.main input,
+.main button {
+  position: relative;
+  margin: 10px 0;
+  border: 1px solid;
+  padding: 4px 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main button {
+  border: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.main button > ion-icon {
+  font-size: 2rem;
+  animation: rotate360 0.7s linear infinite;
+  -webkit-animation: rotate360 0.7s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+.main input[datatype="inc"] {
+  border-color: teal;
+}
+.main input[datatype="exp"] {
+  border-color: tomato;
+}
+.main button[datatype="incBtn"] {
+  background-color: teal;
+}
+.main button[datatype="expBtn"] {
+  background-color: tomato;
+}

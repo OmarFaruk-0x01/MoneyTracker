@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.7rem;
+  padding: 5px;
+}
+@media screen and (max-width: 750px) {
+  .container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+  }
+}

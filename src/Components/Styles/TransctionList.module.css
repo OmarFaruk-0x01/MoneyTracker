@@ -1,0 +1,52 @@
+.body {
+  position: relative;
+  min-width: 100%;
+  max-height: 600px;
+  min-height: 400px;
+  overflow: auto;
+  margin: 10px 0;
+}
+
+.loaderDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 30px;
+}
+.loaderDiv > ion-icon {
+  font-size: 40px;
+  color: teal;
+  animation: rotate360 0.4s linear infinite;
+  -webkit-animation: rotate360 0.4s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+.body::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.body::-webkit-scrollbar-thumb {
+  background-color: white;
+  box-shadow: inset 0px 1px 4px tomato;
+}

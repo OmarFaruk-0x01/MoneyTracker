@@ -1,0 +1,89 @@
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
+  -webkit-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
+  -moz-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
+  -ms-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
+  -o-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
+}
+
+.main > span {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.main:hover > span {
+  opacity: 1;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.main:hover > .main_right {
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+}
+
+.main_left {
+  flex: 1;
+  position: relative;
+  gap: 10px;
+  font-size: 1.4rem;
+}
+
+.main_left span {
+  font-size: 0.8rem;
+  right: -10px;
+  bottom: 0px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.main_right {
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  text-align: right !important;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.main_right ion-icon {
+  font-size: 1.3rem;
+}
+
+.inc_main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: teal;
+}
+.exp_main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: tomato;
+}

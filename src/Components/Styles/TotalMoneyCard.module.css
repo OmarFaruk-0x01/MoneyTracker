@@ -1,0 +1,83 @@
+.body{
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    /* height: 80px; */
+    background-color: white;
+    margin: 5px;
+    /* padding: 5px; */
+}
+
+.body > p{
+    position: relative;
+    padding: 5px;
+}
+.body > p::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+.pBorder_inc::before{
+    background-image: linear-gradient(to right, teal, transparent);
+}
+.pBorder_exp::before{
+    background-image: linear-gradient(to right, tomato, transparent);
+
+}
+
+.incSpan{
+    color: teal;
+}
+
+.expSpan{
+    color: tomato;
+}
+
+.body_exp{
+    background-color: white;
+    box-shadow: 0 1px 4px tomato;
+    
+}
+.body_exp::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: tomato;
+    
+}
+
+
+.body_inc{
+    background-color: white;
+    box-shadow: 0 1px 4px teal;
+    
+}
+.body_inc::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: teal;
+}
+
+.tillDate{
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    font-size: .6rem;
+}
+
+.totalAmount{
+    word-break: break-all;
+    font-size: 1.4rem;
+    padding: 10px;
+    max-height: 400px;
+}

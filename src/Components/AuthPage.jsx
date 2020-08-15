@@ -11,8 +11,9 @@ function AuthPage({ setUser, setLogin }) {
   const [userId, setuserId] = useState("");
   return (
     <div className={APStyle.body}>
-      <h2>Money Tracker App</h2>
+      <label for={"userId"}>Money Tracker App</label>
       <input
+        id={"userId"}
         value={userId}
         onChange={(e) => setuserId(e.target.value)}
         type={"text"}

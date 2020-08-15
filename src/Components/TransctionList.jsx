@@ -7,6 +7,7 @@ import Loader from "./Loader";
 const TransctionCardContainer = loadable(() =>
   import("./TransctionCardContainer")
 );
+
 function TransctionList({ data, isLoded, isData, isUpdate }) {
   return (
     <div className={TLStyle.body}>

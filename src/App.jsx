@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import MoneyInHand from "./Components/MoneyInHand";
 import CardContainer from "./Components/CardContainer";
-import TransctionList from "./Components/TransctionList";
+// import TransctionList from "./Components/TransctionList";
 import BtnContainer from "./Components/BtnContainer";
 import AuthPage from "./Components/AuthPage";
 import ModalRoot from "./Components/ModalRoot";
@@ -11,7 +11,10 @@ import { AuthContext } from "./Components/AuthContext";
 import InputIncomes from "./Components/InputIncomes";
 import { Database } from "./firebase";
 import Header from "./Components/Header";
+// import { loadable } from '@loadable/component';
+import loadable from "@loadable/component";
 
+const TransctionList = loadable(() => import("./Components/TransctionList"));
 function updateIncome(allData) {
   let inc = 0;
   let exp = 0;

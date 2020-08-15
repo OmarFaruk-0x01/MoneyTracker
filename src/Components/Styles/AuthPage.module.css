@@ -11,6 +11,14 @@
 .body label {
   font-size: 1.5rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.body label ion-icon {
+  font-size: 3rem;
 }
 
 .body input {

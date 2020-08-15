@@ -11,7 +11,10 @@ function AuthPage({ setUser, setLogin }) {
   const [userId, setuserId] = useState("");
   return (
     <div className={APStyle.body}>
-      <label htmlFor={"userId"}>Money Tracker App</label>
+      <label htmlFor={"userId"}>
+        <ion-icon name="wallet"></ion-icon>
+        Money Tracker App
+      </label>
       <input
         id={"userId"}
         value={userId}

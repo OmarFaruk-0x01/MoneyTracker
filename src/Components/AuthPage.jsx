@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import APStyle from "./Styles/AuthPage.module.css";
 
-function setLocalStorage(id, callback) {
-  if (id) {
-    localStorage.setItem("userName", id);
-  }
-}
-
 function AuthPage({ setUser, setLogin }) {
   const [userId, setuserId] = useState("");
+  function setLocalStorage(id) {
+    if (id) {
+      localStorage.setItem("userName", id);
+      setUser(userId);
+      setLogin(true);
+    }
+  }
+
   return (
     <div className={APStyle.body}>
       <label htmlFor={"userId"}>
@@ -26,8 +28,6 @@ function AuthPage({ setUser, setLogin }) {
       <button
         onClick={() => {
           setLocalStorage(userId);
-          setUser(userId);
-          setLogin(true);
         }}
       >
         <ion-icon style={{ fontSize: 20 }} name="log-in-outline"></ion-icon>

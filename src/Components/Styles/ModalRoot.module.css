@@ -61,10 +61,10 @@
     -o-transform: translate(-50%, -50%) scale(0);
   }
   to {
-    transform: translate(-50%, -150%) scale(1);
-    -webkit-transform: translate(-50%, -150%) scale(1);
-    -moz-transform: translate(-50%, -150%) scale(1);
-    -ms-transform: translate(-50%, -150%) scale(1);
-    -o-transform: translate(-50%, -150%) scale(1);
+    transform: translate(-50%, -120%) scale(1);
+    -webkit-transform: translate(-50%, -120%) scale(1);
+    -moz-transform: translate(-50%, -120%) scale(1);
+    -ms-transform: translate(-50%, -120%) scale(1);
+    -o-transform: translate(-50%, -120%) scale(1);
   }
 }

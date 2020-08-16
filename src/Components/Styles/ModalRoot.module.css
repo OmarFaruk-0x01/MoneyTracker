@@ -15,7 +15,13 @@
   z-index: 100;
   -webkit-animation: zoomup 0.3s cubic-bezier(0.4, 0.68, 0.04, 1.81) both;
 }
-
+@media screen and (max-width: 750px) {
+  .main {
+    animation: zoomupResponsive 0.3s cubic-bezier(0.4, 0.68, 0.04, 1.81) both;
+    -webkit-animation: zoomupResponsive 0.3s cubic-bezier(0.4, 0.68, 0.04, 1.81)
+      both;
+  }
+}
 .main > ion-icon {
   position: absolute;
   top: 10px;
@@ -44,5 +50,21 @@
     -moz-transform: translate(-50%, -220%) scale(1);
     -ms-transform: translate(-50%, -220%) scale(1);
     -o-transform: translate(-50%, -220%) scale(1);
+  }
+}
+@keyframes zoomupResponsive {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -150%) scale(1);
+    -webkit-transform: translate(-50%, -150%) scale(1);
+    -moz-transform: translate(-50%, -150%) scale(1);
+    -ms-transform: translate(-50%, -150%) scale(1);
+    -o-transform: translate(-50%, -150%) scale(1);
   }
 }

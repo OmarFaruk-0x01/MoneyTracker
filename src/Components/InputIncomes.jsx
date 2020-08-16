@@ -83,4 +83,4 @@ function InputIncomes({ type, allData, isUpdate }) {
   );
 }
 
-export default InputIncomes;
+export default React.memo(InputIncomes);

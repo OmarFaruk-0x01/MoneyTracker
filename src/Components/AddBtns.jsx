@@ -15,4 +15,4 @@ function AddBtns({ type }) {
   );
 }
 
-export default AddBtns;
+export default React.memo(AddBtns);

@@ -1,6 +1,7 @@
 .app {
   min-width: 300px;
   width: 400px;
+
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 50px;
@@ -25,6 +26,7 @@
     width: 100%;
     height: 100%;
     transform: unset;
+    padding: 40px 0;
     top: 0;
     left: 0;
     -webkit-transform: unset;

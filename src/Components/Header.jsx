@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import HStyle from "./Styles/Header.module.css";
 import { AuthContext } from "./AuthContext";
-function Header({ setUser, setLogin, logout }) {
+function Header({ logout }) {
   const userName = useContext(AuthContext);
-
   return (
     <div className={HStyle.body}>
       <span>
@@ -21,4 +20,4 @@ function Header({ setUser, setLogin, logout }) {
   );
 }
 
-export default Header;
+export default React.memo(Header);

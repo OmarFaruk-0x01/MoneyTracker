@@ -20,7 +20,8 @@ function TransctionCard({ type, name, time, amount, removeCard }) {
       </div>
       <div className={TCStyle.main_right} style={{ color: amount_color }}>
         <ion-icon name={`${amount_icon}`}></ion-icon>
-        <span>{amount}</span>
+        <p>{amount}</p>
+        <span>BDT</span>
       </div>
       <span onClick={removeCard}>
         <ion-icon name="trash-outline"></ion-icon>
@@ -29,4 +30,4 @@ function TransctionCard({ type, name, time, amount, removeCard }) {
   );
 }
 
-export default TransctionCard;
+export default React.memo(TransctionCard);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MCStyle from "./Styles/TotalMoneyCard.module.css";
 import { Context } from "../ModalContext";
-function TotalMoneyCard({ type, amount, date }) {
+function TotalMoneyCard({ type, amount }) {
   let bodyStyle,
     pSpan,
     pBorder,
@@ -52,14 +52,19 @@ function TotalMoneyCard({ type, amount, date }) {
           ? "Today"
           : ` ${od} ${allMonth[om - 1]} - ${td} ${allMonth[tm - 1]}`}
       </span>
-      <h3
-        className={MCStyle.totalAmount}
-        style={{ color: type === "inc" ? "teal" : "tomato" }}
-      >
-        {amount > 0 ? amount : "--"}
-      </h3>
+      <div className={MCStyle.amountDiv}>
+        <h3
+          className={MCStyle.totalAmount}
+          style={{ color: type === "inc" ? "teal" : "tomato" }}
+        >
+          {amount > 0 ? amount : "--"}
+        </h3>
+        <span style={{ color: type === "inc" ? "teal" : "tomato" }}>
+          {amount > 0 ? "BDT" : null}
+        </span>
+      </div>
     </div>
   );
 }
 
-export default TotalMoneyCard;
+export default React.memo(TotalMoneyCard);

@@ -17,10 +17,10 @@ function MoneyInHand({ amount, inc, exp }) {
         }}
       >
         {amount !== 0 ? amount : "--"}
-        <sub>{amount !== 0 ? "/=BDT" : null}</sub>
+        <span>{amount !== 0 ? "BDT" : null}</span>
       </h4>
     </div>
   );
 }
 
-export default MoneyInHand;
+export default React.memo(MoneyInHand);

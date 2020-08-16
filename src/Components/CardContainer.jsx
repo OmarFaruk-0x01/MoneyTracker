@@ -10,4 +10,4 @@ function CardContainer({ inc, exp, date }) {
   );
 }
 
-export default CardContainer;
+export default React.memo(CardContainer);

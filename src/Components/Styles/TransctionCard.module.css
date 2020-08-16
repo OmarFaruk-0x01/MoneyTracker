@@ -5,6 +5,7 @@
   align-items: center;
   padding: 10px;
   font-size: 1.2rem;
+
   transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
   -webkit-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
   -moz-transition: visibility 0.4s cubic-bezier(0.22, 0.34, 0.73, 0.48);
@@ -41,8 +42,8 @@
 .main_left {
   flex: 1;
   position: relative;
-  gap: 10px;
   font-size: 1.4rem;
+  padding-right: 30px;
 }
 
 .main_left span {
@@ -51,6 +52,7 @@
   bottom: 0px;
   color: #666;
   margin-top: 10px;
+  line-height: 2;
 }
 
 .main_right {
@@ -68,7 +70,20 @@
 .main_right ion-icon {
   font-size: 1.3rem;
 }
+.main_right p {
+  word-break: break-all;
+}
+.main_right span {
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
 
+.inc_main {
+  background-color: rgba(0, 128, 128, 0.082);
+}
+.exp_main {
+  background-color: rgba(255, 99, 71, 0.082);
+}
 .inc_main::before {
   content: "";
   position: absolute;

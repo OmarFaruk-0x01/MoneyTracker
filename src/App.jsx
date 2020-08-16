@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import MoneyInHand from "./Components/MoneyInHand";
 import CardContainer from "./Components/CardContainer";
@@ -46,7 +46,6 @@ function App() {
   const [userName, setuserName] = useState("guest");
 
   useEffect(() => {
-    console.log("u", userName);
     const unsubscriber = Database.collection(userName).onSnapshot(
       (snapshot) => {
         let newArray = [];
@@ -87,12 +86,12 @@ function App() {
     setIsUpdate(false);
   }, [allData, isUpdate, isLogin, userName]);
 
-  function modalUdate(isOpen, type) {
+  const modalUdate = useCallback((isOpen, type) => {
     setModalOpen(isOpen);
     setModalChildType(type);
-  }
+  }, []);
 
-  function logOutResets() {
+  const logOutResets = useCallback(() => {
     setAllData([]);
     setExpamount(0);
     setHandamount(0);
@@ -100,7 +99,7 @@ function App() {
     setLogin(false);
     setuserName("guest");
     localStorage.removeItem("userName");
-  }
+  }, []);
 
   return (
     <div className={"app"}>

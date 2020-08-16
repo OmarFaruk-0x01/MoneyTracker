@@ -42,3 +42,8 @@
   line-height: 40px;
   /* margin: 10px 5px; */
 }
+
+.moneyText span {
+  font-size: 0.7rem;
+  font-weight: 100;
+}

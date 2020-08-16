@@ -19,4 +19,4 @@ function ModalRoot(props) {
   );
 }
 
-export default ModalRoot;
+export default React.memo(ModalRoot);

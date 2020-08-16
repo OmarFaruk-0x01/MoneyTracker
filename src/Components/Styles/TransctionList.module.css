@@ -1,10 +1,16 @@
 .body {
   position: relative;
   min-width: 100%;
-  max-height: 600px;
+  max-height: 300px;
   min-height: 400px;
   overflow: auto;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 750px) {
+  .body {
+    max-height: none;
+  }
 }
 
 .loaderDiv {

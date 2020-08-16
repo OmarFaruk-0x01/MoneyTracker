@@ -17,6 +17,7 @@ function MoneyInHand({ amount, inc, exp }) {
         }}
       >
         {amount !== 0 ? amount : "--"}
+        <sub>{amount !== 0 ? "/=BDT" : null}</sub>
       </h4>
     </div>
   );
